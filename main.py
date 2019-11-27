@@ -51,5 +51,5 @@ class BlackCheckRun(CheckRun):
 
 handle = BlackCheckRun.as_handler(
     'black',
-    'black', '--check', '--diff', '.'
+    'black', '--check', '--diff',
 )
