@@ -45,7 +45,8 @@ class BlackCheckRun(CheckRun):
                     logger.info(
                         'linter exited with status code %s in %ss' % (process.returncode, info.ru_utime)
                     )
-                    code &= process.returncode
+                    if process.returncode != 0:
+                        code = process.returncode
         return code, log
 
 
