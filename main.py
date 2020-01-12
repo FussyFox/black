@@ -21,7 +21,7 @@ class BlackCheckRun(CheckRun):
         code = 0
         cmd = ' '.join(('python', '-m', self.cmd) + self.cmd_args)
         log = "$ %s .\n" % cmd
-        for file_name in glob.glob(os.path.join(code_path, 'tests/**.py'), recursive=True):
+        for file_name in glob.glob(os.path.join(code_path, '**/**.py'), recursive=True):
             if os.path.isfile(file_name):
                 try:
                     logger.info('Running: %s', cmd)
