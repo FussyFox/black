@@ -2,8 +2,7 @@ import os
 from pathlib import Path
 
 import pytest
-
-from main import BlackCheckRun
+from lintipy import CheckRun
 
 BASE_DIR = Path(os.path.dirname(__file__))
 
@@ -11,7 +10,7 @@ BASE_DIR = Path(os.path.dirname(__file__))
 class TestBlackCheckRun:
     @pytest.fixture
     def handler(self):
-        return BlackCheckRun("black", "black", "--check", "--diff")
+        return CheckRun("black", "black", "--check", "--diff", "tests")
 
     def test_run_process(self, handler):
         code, output = handler.run_process(str(BASE_DIR / ".."))

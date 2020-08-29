@@ -1,3 +1,3 @@
-# black -- Decommissioned
+# black
 
-Black is no longer supported, due to it's lack of single processing support, see also https://github.com/psf/black/issues/421
+Python's black linter run on AWS lambda.

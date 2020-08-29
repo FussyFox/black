@@ -1,1 +1,1 @@
-'''black will throw an error'''
+"""black will throw an error"""
