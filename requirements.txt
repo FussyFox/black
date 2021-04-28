@@ -1,2 +1,2 @@
 lintipy==1.4.4
-black==20.8b1
+black==21.4b1
